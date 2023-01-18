@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sofia+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="Images/icon.png" />
+    <link rel="stylesheet" href="Css/all.min.css" />
+    <link rel="stylesheet" href="Css/bootstrap.min.css" />
+    <link rel="stylesheet" href="Css/main.css" />
+    <title>Dashboard</title>
+  </head>
+  <body>
+    <nav class="site-header sticky-top py-3">
+      <div class="container d-flex align-items-center justify-content-between">
+        <div class="w-25">
+          <img class="w-25" src="Images/logo.JPG" alt="AuctionZip" />
+        </div>
+        <div>
+          <a href="index.html" class="mx-3" id="Home">Home</a>
+          <a id="Dashboard" href="/Dashboard.html" class="mx-3">Dashboard</a>
+          <a href="" class="mx-3">Store List</a>
+          <a href="" class="mx-3">Contact</a>
+        </div>
+        <div class="nav-icon">
+          <i class="fa-regular fa-bell text-white fa-xl"></i>
+          <i class="fa-regular fa-heart text-white fa-xl mx-3"></i>
+          <i class="fa-regular fa-user text-white fa-xl"></i>
+        </div>
+      </div>
+    </nav>
+    <div class="container vh-100 py-5">
+      <div class="row">
+        <div class="col-lg-4">
+          <div
+            class="dashboard d-flex flex-column text-center justify-content-between bg-dark text-white h-100 rounded-3"
+          >
+            <div class="d-flex flex-column justify-content-between h-100 pt-3">
+              <div
+                class="d-flex justify-content-center align-items-center dash-hover"
+              >
+                <i class="fa-solid fa-gauge-high p-2 fa-2xl"></i>
+                <a href="" class="text-decoration-none text-white display-6"
+                  >Dashboard</a
+                >
+              </div>
+              <div
+                class="d-flex justify-content-center align-items-center dash-hover"
+              >
+                <i class="fa-solid fa-briefcase p-2 fa-2xl"></i>
+                <a href="" class="text-decoration-none text-white display-6"
+                  >Products</a
+                >
+              </div>
+              <div
+                class="d-flex justify-content-center align-items-center dash-hover"
+              >
+                <i class="fa-solid fa-cart-shopping p-2 fa-2xl"></i>
+                <a href="" class="text-decoration-none text-white display-6"
+                  >Orders</a
+                >
+              </div>
+              <div
+                class="d-flex justify-content-center align-items-center dash-hover"
+              >
+                <i class="fa-solid fa-upload p-2 fa-2xl"></i>
+                <a href="" class="text-decoration-none text-white display-6"
+                  >Withdraws</a
+                >
+              </div>
+              <div
+                class="d-flex justify-content-center align-items-center dash-hover"
+              >
+                <i class="fa-solid fa-gear p-2 fa-2xl"></i>
+                <a href="" class="text-decoration-none text-white display-6"
+                  >Settings</a
+                >
+              </div>
+            </div>
+            <div class="d-flex justify-content-evenly mt-5 py-3 dash-icon">
+              <i class="fa-solid fa-arrow-up-right-from-square fa-xl mx-3"></i>
+              <i class="fa-regular fa-heart text-white fa-xl mx-3"></i>
+              <i class="fa-solid fa-power-off fa-xl mx-3"></i>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="text-center dash-border">
+            <p>Sales</p>
+            <p>0.0$</p>
+            <hr class="w-75 m-auto mb-2" />
+            <p>Earnings</p>
+            <p>0.0$</p>
+            <hr class="w-75 m-auto mb-2" />
+            <p>Page View</p>
+            <p>0.0$</p>
+            <hr class="w-75 m-auto mb-2" />
+            <p>Orders</p>
+            <p>0.0$</p>
+          </div>
+          <div class="dash-border mt-2">
+            <div class="d-flex align-items-center pt-3">
+              <i class="fa-solid fa-cart-shopping mx-2"></i>
+              <h5 class="m-0">Orders</h5>
+            </div>
+            <hr />
+            <div class="d-flex flex-column px-2">
+              <p class="text-muted">Total 0</p>
+              <p class="text-success">Completed 0</p>
+              <p class="text-warning">Pending 0</p>
+              <p class="text-info">Processing 0</p>
+              <p class="text-danger">Cancelled 0</p>
+              <p class="text-primary">Refunded 0</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="dash-border">
+            <div class="d-flex flex-column p-2">
+              <h5>Sales this month</h5>
+              <hr />
+              <div class="d-flex align-items-center">
+                <div class="box blue mx-2"></div>
+                <p>Sales Total</p>
+              </div>
+              <div class="d-flex align-items-center">
+                <div class="box green mx-2"></div>
+                <p>N.o of Orders</p>
+              </div>
+            </div>
+            <canvas id="myChart" style="width: 100%; max-width: 600px"></canvas>
+          </div>
+          <div class="dash-border mt-2">
+            <div class="d-flex align-items-center pt-3">
+              <i class="fa-solid fa-briefcase mx-2"></i>
+              <h5 class="m-0">Products</h5>
+            </div>
+            <hr />
+            <div class="d-flex flex-column p-2">
+              <p>Total 0</p>
+              <p>Live 0</p>
+              <p>Offline 0</p>
+              <p>Pending Review 0</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="bg-dark text-white py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-md">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              class="d-block mb-2"
+              role="img"
+              viewBox="0 0 24 24"
+            >
+              <title>Product</title>
+              <circle cx="12" cy="12" r="10" />
+              <path
+                d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94"
+              />
+            </svg>
+            <small class="d-block mb-3 text-muted">AuctionZip</small>
+          </div>
+          <div class="col-6 col-md">
+            <h5>Features</h5>
+            <ul class="list-unstyled text-small">
+              <li>
+                <a class="link-secondary text-decoration-none" href="#"
+                  >-About Us</a
+                >
+              </li>
+              <li>
+                <a class="link-secondary text-decoration-none" href="#"
+                  >-Shop List</a
+                >
+              </li>
+              <li>
+                <a class="link-secondary text-decoration-none" href="#"
+                  >-News</a
+                >
+              </li>
+              <li>
+                <a class="link-secondary text-decoration-none" href="#"
+                  >-Privacy Policy</a
+                >
+              </li>
+              <li>
+                <a class="link-secondary text-decoration-none" href="#"
+                  >-Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="col-6 col-md">
+            <h5>Resources</h5>
+            <ul class="list-unstyled text-small">
+              <li>
+                <a class="link-secondary text-decoration-none" href="#"
+                  >-Resource name</a
+                >
+              </li>
+              <li>
+                <a class="link-secondary text-decoration-none" href="#"
+                  >-Resource</a
+                >
+              </li>
+              <li>
+                <a class="link-secondary text-decoration-none" href="#"
+                  >-Another resource</a
+                >
+              </li>
+              <li>
+                <a class="link-secondary text-decoration-none" href="#"
+                  >-Final resource</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="col-6 col-md">
+            <h5>About</h5>
+            <ul class="list-unstyled text-small">
+              <li>
+                <a class="link-secondary text-decoration-none" href="#"
+                  >-Team</a
+                >
+              </li>
+              <li>
+                <a class="link-secondary text-decoration-none" href="#"
+                  >-Locations</a
+                >
+              </li>
+              <li>
+                <a class="link-secondary text-decoration-none" href="#"
+                  >-Privacy</a
+                >
+              </li>
+              <li>
+                <a class="link-secondary text-decoration-none" href="#"
+                  >-Terms</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <script src="Javascript/all.min.js"></script>
+    <script src="Javascript/bootstrap.bundle.min.js"></script>
+    <script src="Javascript/jquery-3.6.1.min.js"></script>
+    <script src="Javascript/main.js"></script>
+  </body>
+</html>
